@@ -1,15 +1,9 @@
 import type { Metadata } from "next";
-import { Montserrat } from "next/font/google";
+import { titleFont, bodyFont } from './fonts';
 import { SITE_CONFIGS } from "@/constants";
 import SiteNav from "@/app/components/SiteNav";
 import Footer from "@/app/components/Footer";
 import "./globals.css";
-
-const montserrat = Montserrat({
-  subsets: ['latin'],
-  variable: '--font-montserrat',
-  display: 'swap',
-});
 
 export const metadata: Metadata = {
   title: SITE_CONFIGS.title,
@@ -22,9 +16,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className={`${titleFont.variable} ${bodyFont.variable}`}>
       <body
-        className={`${montserrat.variable} antialiased mx-auto max-w-2xl px-5 py-12`}
+        className="antialiased mx-auto max-w-2xl px-5 py-12"
       >
         <header className="mb-14 flex flex-row place-content-between">
           <SiteNav />

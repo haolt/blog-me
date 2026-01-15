@@ -1,0 +1,23 @@
+.home-post__title {
+  font-size: 28px;
+  font-weight: 900;
+  color: #feb3d7;
+}
+
+.home-post:hover .home-post__title {
+  background: linear-gradient(90deg, #ffb3d8, #cbb6ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.home-post__date {
+  font-size: 13px;
+  font-weight: 400;
+  color: #d1d5db;
+}
+
+.home-post__excerpt {
+  font-size: 16px;
+  font-weight: 400;
+  color: #d1d5db;
+}

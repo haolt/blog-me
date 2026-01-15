@@ -1,21 +1,22 @@
-import Link from "next/link";
+import PostItem from "@/app/components/PostItem";
 
 const mockPost = {
-  title: 'Mock title',
-  excerpt: 'Mock excerpt',
-  date: 'Jan 1, 2026',
+  title: 'Introducing RSC Explorer',
+  excerpt: 'My new hobby project.',
+  date: 'December 19, 2025',
 };
 
 export default function Home() {
   return (
     <>
       {
-        [...Array(6)].map((_, i) => (
-          <Link href={`${mockPost.title.toLowerCase().split(' ').join('-')}-${i}`} key={`${mockPost.title} ${i}`}>
-            <h2>{`${mockPost.title} ${i}`}</h2>
-            <p>{`${mockPost.excerpt} ${i}`}</p>
-            <p>{mockPost.date}</p>
-          </Link>
+        [...Array(5)].map((_, i) => (
+          <PostItem
+            title={mockPost.title}
+            date={mockPost.date}
+            excerpt={mockPost.excerpt}
+            key={`${mockPost.title}-item-${i}`}
+          />
         ))
       }
     </>

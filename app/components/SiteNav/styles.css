@@ -1,0 +1,17 @@
+.site-nav__title {
+  font-size: 24px;
+  font-weight: 900;
+  color: #ffffffe0;
+}
+
+.site-nav__title--gradient {
+  background: linear-gradient(90deg, #ffb3d8, #cbb6ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.site-nav__dm {
+  font-size: 16px;
+  font-weight: 400;
+  color: #e5e7eb;
+}

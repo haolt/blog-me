@@ -1,6 +1,6 @@
 "use client";
-import SiteNav from '@/app/components/SiteNav';
-import useIsMainPage from "@/app/hooks/useIsMainPage";
+import SiteNav from '@/components/SiteNav';
+import useIsMainPage from "@/hooks/useIsMainPage";
 
 export default function Footer() {
   const isMainPage = useIsMainPage();

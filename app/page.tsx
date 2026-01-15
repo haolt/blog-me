@@ -1,4 +1,4 @@
-import PostItem from "@/app/components/PostItem";
+import PostItem from "@/components/PostItem";
 
 const mockPost = {
   title: 'Introducing RSC Explorer',

@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { titleFont, bodyFont } from './fonts';
 import { SITE_CONFIGS } from "@/constants";
-import SiteNav from "@/app/components/SiteNav";
-import Footer from "@/app/components/Footer";
+import SiteNav from "@/components/SiteNav";
+import Footer from "@/components/Footer";
 import "./globals.css";
 
 export const metadata: Metadata = {

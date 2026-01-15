@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import useIsMainPage from "@/app/hooks/useIsMainPage";
+import useIsMainPage from "@/hooks/useIsMainPage";
 import { SITE_CONFIGS } from "@/constants";
 import "./styles.css";
 

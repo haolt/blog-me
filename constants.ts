@@ -1,7 +1,7 @@
 export const SITE_CONFIGS = {
   title: "<haolt />",
   description: "A personal blog by haolt",
-  contact: "/dm"
+  contact: "/dm",
 };
 
 export const SOCIAL_LINKS = [
@@ -11,6 +11,14 @@ export const SOCIAL_LINKS = [
   },
   {
     name: "Facebook",
-    url: "https://www.facebook.com/haolt98"
+    url: "https://www.facebook.com/haolt98",
+  },
+  {
+    name: "Viblo",
+    url: "https://viblo.asia/u/hao3004",
+  },
+  {
+    name: "Gmail",
+    url: "mailto:haolt.work@gmail.com",
   },
 ];

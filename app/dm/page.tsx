@@ -1,19 +1,22 @@
-import { SOCIAL_LINKS } from '@/constants';
-import styles from './page.module.css';
-import Link from 'next/dist/client/link';
+import Link from "next/dist/client/link";
+import { SOCIAL_LINKS } from "@/constants";
+import styles from "./page.module.css";
 
 export default function Contact() {
   return (
     <>
       <div className="flex gap-2">
-        <span className="font-body font-title mb-2">Find me via:</span>
+        <span className="font-body font-title mb-2">Feel free to DM me via</span>
         {
           SOCIAL_LINKS.map(({
             name, url
-          }) => (
-            <a target="_blank" href={url} key={url} className={`${styles.contactLink} font-body`} title={name}>
-              {name}
-            </a>
+          }, index) => (
+            <span key={url}>
+              <a target="_blank" href={url} className={`${styles.contactLink} font-body`} title={name}>
+                {name}
+              </a>
+              {index < SOCIAL_LINKS.length - 1 ? ' · ' : '.'}
+            </span>
           ))
         }
       </div>

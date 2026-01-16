@@ -15,3 +15,42 @@
   font-weight: 400;
   color: #d1d5db;
 }
+
+.markdown a {
+  color: #ffa7c4;
+  display: inline-block;
+  text-decoration: underline;
+  text-decoration-color: #ffa7c4;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
+}
+
+.markdown :is(h1, h2, h3, h4, h5, h6) {
+  margin: 2rem 0;
+  font-size: 24px;
+  font-weight: 700;
+  scroll-margin-top: 80px;
+}
+
+.markdown :is(h1, h2, h3, h4, h5, h6) a {
+  color: #ffffffe0;
+  text-decoration: none;
+}
+
+.markdown pre {
+  background: #0f172a;
+  color: #e5e7eb;
+  padding: 16px;
+  border-radius: 8px;
+  overflow-x: auto;
+}
+
+.markdown code {
+  font-family: monospace;
+}
+
+.code-block {
+  background: #0f172a;
+  padding: 16px;
+  border-radius: 8px;
+}

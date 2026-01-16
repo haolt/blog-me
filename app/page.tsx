@@ -1,21 +1,16 @@
 import PostItem from "@/components/PostItem";
-
-const mockPost = {
-  title: 'Introducing RSC Explorer',
-  excerpt: 'My new hobby project.',
-  date: 'December 19, 2025',
-};
+import getAllPosts from '@/helpers/getAllPosts';
 
 export default function Home() {
+  const posts = getAllPosts();
+
   return (
     <>
       {
-        [...Array(5)].map((_, i) => (
+        posts.map((post) => (
           <PostItem
-            title={mockPost.title}
-            date={mockPost.date}
-            excerpt={mockPost.excerpt}
-            key={`${mockPost.title}-item-${i}`}
+            key={post.slug}
+            post={post}
           />
         ))
       }

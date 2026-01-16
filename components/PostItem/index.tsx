@@ -1,22 +1,24 @@
 import Link from "next/link";
-import './styles.css';
+import { formatDate } from "@/helpers/time";
+import "./styles.css";
 
-export default function PostItem({
-  title,
-  date,
-  excerpt,
-  key,
-}: {
-  title: string;
-  date: string;
-  excerpt: string;
-  key: string;
-}) {
+export type PostMeta = {
+  slug: string;
+  title?: string;
+  date?: string;
+  excerpt?: string;
+};
+
+type Props = {
+  post: PostMeta;
+};
+
+export default function PostItem({ post }: Props) {
   return (
-    <Link href={`${title.toLowerCase().split(' ').join('-')}-${key}`} className="home-post block py-4" key={key}>
-      <h2 className="font-title home-post__title mb-2">{title}</h2>
-      <p className="font-body home-post__date">{date}</p>
-      <p className="font-body home-post__excerpt mt-1">{excerpt}</p>
+    <Link href={post.slug} className="home-post block py-4" key={post.slug}>
+      <h2 className="font-title home-post__title mb-2">{post.title}</h2>
+      <p className="font-body home-post__date">{formatDate(post.date)}</p>
+      <p className="font-body home-post__excerpt mt-1">{post.excerpt}</p>
     </Link>
   );
 };

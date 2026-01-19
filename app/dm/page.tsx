@@ -6,7 +6,7 @@ export default function Contact() {
   return (
     <>
       <div className="flex gap-2">
-        <span className="font-body font-title mb-2">Feel free to DM me via</span>
+        <span className="font-body font-title mb-2">Any thoughts? Feel free to DM me via</span>
         {
           SOCIAL_LINKS.map(({
             name, url
@@ -20,9 +20,6 @@ export default function Contact() {
           ))
         }
       </div>
-      <Link href="/" className={`${styles.contactLink} font-body`}>
-        ← Home page
-      </Link>
     </>
   );
 };

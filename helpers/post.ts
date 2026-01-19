@@ -4,7 +4,7 @@ import matter from "gray-matter";
 
 const postsDir = path.join(process.cwd(), 'data');
 
-export default function getAllPosts() {
+export const getAllPosts = () => {
   const files = fs.readdirSync(postsDir);
 
   return files.map(file => {

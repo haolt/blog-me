@@ -1,5 +1,6 @@
 import { notFound } from "next/navigation";
-import getAllPosts from "@/helpers/getAllPosts";
+import Contact from "@/app/dm/page";
+import { getAllPosts } from "@/helpers/post";
 import { markdownToHtml } from "@/helpers/markdown";
 import { formatDate } from "@/helpers/time";
 import styles from "./page.module.css";
@@ -24,6 +25,7 @@ export default async function PostDetail({
           dangerouslySetInnerHTML={{ __html: contentHtml }}
         />
       </article>
+      <Contact />
     </>
   );
 };

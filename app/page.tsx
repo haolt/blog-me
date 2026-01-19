@@ -1,5 +1,5 @@
 import PostItem from "@/components/PostItem";
-import getAllPosts from '@/helpers/getAllPosts';
+import { getAllPosts } from '@/helpers/post';
 
 export default function Home() {
   const posts = getAllPosts();

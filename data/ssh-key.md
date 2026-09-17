@@ -81,11 +81,11 @@ Host github.com-company
 
 
 ### # SSH key authentication
-```js
-// Context:
-// - PRIVATE_KEY 🔑 đang ở máy bạn client
-// - PUBLIC_KEY 🔓 đã gắn trên server
+Context:
+- PRIVATE_KEY 🔑 đang ở máy bạn client
+- PUBLIC_KEY 🔓 đã gắn trên server
 
+```js
 Client                           Server
   |                                 |
   | ------ connect request -------> |
@@ -97,14 +97,14 @@ Client                           Server
   | <--- verify with PUBLIC_KEY --> |
   |                                 |
   | ----------- OK / FAIL --------- |
-
-// Khi kết nối SSH, server gửi một challenge ngẫu nhiên cho client.
-// Client dùng private key để ký challenge này và gửi lại chữ ký.
-// Server dùng public key đã lưu để verify chữ ký.
-// Nếu hợp lệ, kết nối được chấp nhận.
-
 ```
-Server không tin bạn vì bạn có key, mà vì bạn chứng-minh-được bạn sở hữu nó.
+1. Khi kết nối SSH, server gửi một challenge ngẫu nhiên cho client.
+2. Client dùng private key để ký challenge này và gửi lại chữ ký.
+3. Server dùng public key đã lưu để verify chữ ký.
+4. Nếu hợp lệ, kết nối được chấp nhận.
+
+> The server trusts you because you ~~have the key~~ can <u>prove you own</u> it.
+
 
 ### # ...
 Just a small collection of things I've learned along the way 🌸

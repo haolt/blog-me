@@ -7,7 +7,7 @@ const postsDir = path.join(process.cwd(), 'data');
 export const getAllPosts = () => {
   const files = fs.readdirSync(postsDir);
 
-  return files.map(file => {
+  const posts = files.map(file => {
     const slug = file.replace('.md', '');
     const raw = fs.readFileSync(path.join(postsDir, file), 'utf-8');
     const { data, content } = matter(raw);
@@ -22,4 +22,8 @@ export const getAllPosts = () => {
       title: String(data.title),
     };
   });
+
+  return posts.sort(
+    (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
+  );
 };

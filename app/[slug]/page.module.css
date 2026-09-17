@@ -85,9 +85,52 @@
   text-align: left;
 }
 
+.markdown figure {
+  margin: 1rem 0;
+}
+
 .markdown figure figcaption {
   font-style: italic;
   font-size: 12px;
   font-weight: 300;
-  color: #d1d5db99;
+}
+
+.markdown blockquote {
+  position: relative;
+  margin: 1rem 0;
+  padding: 1rem 1rem 1rem 2rem;
+  font-style: italic;
+  color: #d1d5db;
+}
+
+.markdown blockquote::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 4px;
+  height: 100%;
+  border-radius: 1px;
+  background: linear-gradient(
+    to bottom,
+    #ffb3d8,
+    #cbb6ff
+  );
+}
+
+.markdown blockquote::after {
+  content: "❝";
+  position: absolute;
+  top: -5px;
+  left: 10px;
+  font-size: 2rem;
+  color: transparent;
+  width: 30px;
+  background: linear-gradient(to bottom, #ffb3d8, #cbb6ff);
+  -webkit-background-clip: text;
+  opacity: .3;
+}
+
+.markdown blockquote p {
+  margin: 0;
 }
